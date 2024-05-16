@@ -1,2 +1,63 @@
 @import "./variables.scss";
 
+.hero_container{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 145px 0 100px 0;
+    gap: 30px;
+
+    .hero_content{
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+
+        h1{
+            font-family: $heading;
+            font-size: 56px;
+            margin: 0;
+            color: $white;
+        }
+        p{
+            color: $white;
+            font-family: $para;
+        }
+        button{
+            font-family: $heading;
+            color: $white;
+            border: 2px solid $white;
+            background-color: transparent;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+
+            &:hover{
+                background-color: $secondary;
+
+            }
+        }
+    }
+
+    .hero_img{
+        width: 400px;
+        img{
+            width: 100%;
+        }
+    }
+
+
+    .element{
+        position: absolute;
+        width: 761px;
+        left: -103px;
+        transform: rotate(6deg);
+        z-index: -1;
+        img{
+            width: 100%;
+        }
+    }
+}
