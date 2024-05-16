@@ -53,4 +53,39 @@
 }
 .hero_container .element img {
   width: 100%;
+}
+
+.about_container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background-color: white;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+}
+.about_container h1 {
+  color: #673AB7;
+  font-family: "Unbounded";
+  font-size: 36px;
+}
+.about_container p {
+  font-family: "Quicksand";
+  color: #673AB7;
+  font-weight: 500;
+  width: 75%;
+}
+.about_container .element {
+  position: absolute;
+  width: 761px;
+  left: -103px;
+  transform: rotate(6deg);
+  z-index: 0;
+  opacity: 0.3;
+}
+.about_container .element img {
+  width: 100%;
 }/*# sourceMappingURL=home_style.css.map */
