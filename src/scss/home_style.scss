@@ -1,6 +1,6 @@
 @import "./variables.scss";
 
-.hero_container{
+.hero_container {
     position: relative;
     overflow: hidden;
     display: flex;
@@ -9,22 +9,47 @@
     padding: 145px 0 100px 0;
     gap: 30px;
 
-    .hero_content{
+    @media(max-width:640px){
+        flex-direction: column-reverse;
+        padding: 100px 0 100px 0;
+    }
+
+    .hero_content {
         width: 500px;
         display: flex;
         flex-direction: column;
+        z-index: 1;
 
-        h1{
+        @media(max-width:769px){
+            width: 300px;
+        }
+
+        @media(max-width:640px){
+            align-items: center;
+            justify-content: center;
+        }
+        h1 {
             font-family: $heading;
             font-size: 56px;
             margin: 0;
             color: $white;
+            @media(max-width:640px){
+                font-size: 36px;
+                text-align: center;
+            }
         }
-        p{
+
+        p {
             color: $white;
             font-family: $para;
+
+            @media(max-width:640px){
+                font-size: 12px;
+                text-align: center;
+            }
         }
-        button{
+
+        button {
             font-family: $heading;
             color: $white;
             border: 2px solid $white;
@@ -35,35 +60,46 @@
             cursor: pointer;
             transition: all 0.3s ease-in-out;
 
-            &:hover{
+            &:hover {
                 background-color: $secondary;
 
             }
         }
     }
 
-    .hero_img{
+    .hero_img {
         width: 400px;
-        img{
+        z-index: 1;
+
+        @media(max-width:769px){
+            width: 300px;
+        }
+
+        @media(max-width:640px){
+            width: 200px;
+        }
+
+        img {
             width: 100%;
         }
     }
 
 
-    .element{
+    .element {
         position: absolute;
         width: 761px;
         left: -103px;
         transform: rotate(6deg);
-        z-index: -1;
-        img{
+        z-index: 0;
+
+        img {
             width: 100%;
         }
     }
 }
 
 
-.about_container{
+.about_container {
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -75,28 +111,106 @@
     justify-content: center;
     padding: 100px 0;
 
-    h1{
+    h1 {
         color: $primary;
         font-family: $heading;
         font-size: 36px;
+        z-index: 2;
     }
 
-    p{
+    p {
         font-family: $para;
         color: $primary;
         font-weight: 500;
         width: 75%;
+        z-index: 2;
 
     }
 
-    .element{
+    .element {
         position: absolute;
         width: 761px;
         left: -103px;
-        transform:  rotate(187deg) translateX(-137px)
-        z-index: 0;
-    opacity: 0.3;
-        img{
+        transform: rotate(187deg) translateX(-137px);
+        z-index: 1;
+        opacity: 0.3;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+
+.course_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 150px 0;
+    gap: 20px;
+    position: relative;
+    overflow: hidden;
+
+    h1{
+        font-family: $heading;
+        color: $white;
+        font-size: 36px;
+        z-index: 2;
+    }
+    .course_list{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 100px;
+        flex-wrap: wrap;
+        z-index: 2;
+
+        .course{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            img{
+                width: 200px;
+                border-radius: 16px;
+            }
+            p{
+                font-family: $para;
+                color: $white;
+                font-weight: 500;
+                font-size: 20px;
+                text-align: center;
+            }
+
+            button{
+                font-family: $heading;
+            color: $white;
+            border: 2px solid $white;
+            background-color: transparent;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                background-color: $secondary;
+
+            }
+            }
+        }
+    }
+
+    .element {
+        position: absolute;
+        width: 761px;
+        right: -200px;
+        transform: rotate(6deg) scale(-1,-1);
+        z-index: 1;
+
+        img {
             width: 100%;
         }
     }
